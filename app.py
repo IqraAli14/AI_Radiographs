@@ -2,15 +2,13 @@ import logging
 from typing import Optional
 import time
 import os
-from dotenv import load_dotenv
 import streamlit as st
 import PIL.Image
 from google import genai
 from google.genai import types
 
-# Load environment variables
-load_dotenv()
-API_KEY = os.getenv("GEMINI_API_KEY")
+# Load API key securely from Streamlit Secrets
+api_key = st.secrets["GEMINI_API_KEY"]
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
