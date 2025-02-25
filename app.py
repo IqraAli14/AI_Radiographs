@@ -6,7 +6,6 @@ import streamlit as st
 import PIL.Image
 from google import genai
 from google.genai import types
-import logging
 # Load API key securely from Streamlit Secrets
 api_key = st.secrets["GEMINI_API_KEY"]
 
